@@ -1,0 +1,59 @@
+import React from "react";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/js/bootstrap.bundle';
+import ReactToExcel from 'react-html-table-to-excel'
+// import Reff from "./reactpdfref";
+
+
+class Excel extends React.Component {
+    render() {
+      return(
+        <>
+       <h2>Hi, I am a Car!</h2>;
+<ReactToExcel
+className='btn btn-info'
+// id='ss'
+    table='tablexls'
+    filename='spyss file'
+    // sheet='sheet 1'
+    buttonText='export'
+/>
+
+       <table class="table" id="tablexls" border='1'>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+       </>
+       )
+       }
+  }
+
+  export default Excel;
